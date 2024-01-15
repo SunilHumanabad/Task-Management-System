@@ -1,0 +1,28 @@
+import React, { useEffect } from 'react';
+import Auth from '../Auth';
+import { Link } from 'react-router-dom';
+
+const Home = () => {
+  Auth();
+  return (
+    <div className='container'>
+        <div className="container col-xxl-8 px-4 py-5">
+          <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div className="col-10 col-sm-8 col-lg-6">
+              <img src="https://www.prosoftly.com/wp-content/uploads/2020/01/task.png" className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" />
+            </div>
+            <div className="col-lg-6">
+              <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">Task Management System</h1>
+              <p className="lead">Task Management Systems streamline task creation, assignment, and tracking, fostering efficient collaboration. They prioritize, monitor progress, and enhance productivity, ensuring successful project management for individuals and teams</p>
+              <div className="d-grid gap-2 d-md-flex justify-content-md-start">
+                <Link to="/task-new" className="btn btn-primary btn-lg px-4 me-md-2">New Task</Link>
+                <Link to="/profile" className="btn btn-outline-secondary btn-lg px-4">Profile</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  )
+}
+
+export default Home
